@@ -1,19 +1,13 @@
-<script>
-</script>
-
 <template>
-  
-  <h1>Food Lists</h1>
-  <food-mango/>
-  <food-strawberry/>
-  <food-mango/>
-  <food-strawberry/>
-  <personal-profile/>
+  <h1>Food</h1>
   <country/>
+  <food-item/>
+  <food-item/>
+  <food-item/>
   <comment-form/>
   <comment/>
-</template>
-<style>
+   
 
-  
-</style>
+</template>
+
+<script></script>
