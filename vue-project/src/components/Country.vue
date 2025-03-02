@@ -2,22 +2,22 @@
 import { ref, onMounted } from 'vue'
 import { supabase } from '../lib/supabaseClient'
 
-const instruments = ref([])
+const Countries = ref([])
 
-async function getInstruments() {
-  const { data } = await supabase.from('instruments').select()
-  instruments.value = data
+async function getcountries() {
+  const { data } = await supabase.from('Countries').select()
+  countries.value = data
 }
 
 onMounted(() => {
-  getInstruments()
+  getcountries()
 })
 </script>
 
 <template>
     <h1>Countries:</h1>
     <ul>
-        <li v-for="instrument in instruments" :key="instrument.id">{{ instrument.name }}</li>
+        <li v-for="country in countries" :key="countries.id">{{ countries.name }}</li>
     </ul>
 </template>
 
